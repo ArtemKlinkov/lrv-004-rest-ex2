@@ -13,7 +13,7 @@ class CarController extends Controller
      *
      * @return Response
      */
-    public function index(): Response
+    public function index()
     {
         return Car::paginate(10);
     }
@@ -24,7 +24,7 @@ class CarController extends Controller
      * @param CarRequest $request
      * @return bool
      */
-    public function store(CarRequest $request): bool
+    public function store(CarRequest $request)
     {
         return Car::create($request->validated());
     }
@@ -35,7 +35,7 @@ class CarController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show(int $id): Response
+    public function show(int $id)
     {
         return Car::findOrFail($id);
     }

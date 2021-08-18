@@ -16,7 +16,7 @@ class CarRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class CarRequest extends FormRequest
         return [
             'brand' => ['required', 'string', 'max:255'],
             'model' => ['required', 'string', 'max:255'],
-            'price' => ['required', 'float']
+            'price' => ['required', 'numeric']
         ];
     }
 
